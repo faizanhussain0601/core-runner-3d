@@ -1,0 +1,140 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background: #050b18;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+#game {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+#game canvas {
+  display: block;
+}
+
+.hud {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(#050b18dd, transparent);
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  color: #50dfff;
+}
+
+.stats {
+  display: flex;
+  gap: 30px;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.stats span {
+  display: block;
+  margin-top: 7px;
+  font-size: 23px;
+  font-weight: bold;
+  color: #50dfff;
+}
+
+.message {
+  position: fixed;
+  z-index: 3;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #020817bb;
+  backdrop-filter: blur(8px);
+  padding: 20px;
+}
+
+.message h1 {
+  font-size: clamp(32px, 6vw, 65px);
+  color: #51dfff;
+  letter-spacing: 5px;
+  text-shadow: 0 0 25px #00aaff;
+}
+
+.message p {
+  margin-top: 18px;
+  color: #d0eaff;
+  font-size: 17px;
+}
+
+.message .controls {
+  color: #7c9bbd;
+  font-size: 13px;
+}
+
+button {
+  margin-top: 35px;
+  padding: 16px 45px;
+  border: 1px solid #50dfff;
+  border-radius: 8px;
+  background: #087cb5;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #00a9e8;
+  box-shadow: 0 0 25px #00aaff;
+  transform: scale(1.05);
+}
+
+.help {
+  position: fixed;
+  z-index: 2;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #8baacb;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+  .hud {
+    padding: 18px;
+  }
+
+  .brand {
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+
+  .stats {
+    gap: 15px;
+    font-size: 10px;
+  }
+
+  .stats span {
+    font-size: 17px;
+  }
+}
